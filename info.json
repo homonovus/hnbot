@@ -1,0 +1,7 @@
+{
+	"token" : "BOT TOKEN GOES HERE",
+	"id" : "BOT ID",
+	"owner" : "OWNER ID",
+	"prefix" : "PREFIX GOES HERE",
+	"developers" : [ "USER ID 1", "USER ID 2", "USER ID 3" ]
+}
