@@ -34,7 +34,7 @@ bot.registerCommand( "eval", function( msg, args ) {
 		col = 0x645188;
 	}*/
 
-	msg.edit( {
+	bot.createMessage( msg.channel.id, {
 		embed: {
 			title: "Eval",
 
@@ -50,7 +50,7 @@ bot.registerCommand( "eval", function( msg, args ) {
 		} 
 	} );
 
-	console.log( "EVAL: In: " + inp + "Out: " + out );
+	console.log( "EVAL: In: " + inp + " Out: " + out );
 }, {
 	description: "Evaluation",
 	aliases: [ "e" ]
@@ -74,9 +74,10 @@ bot.registerCommand( "ceval", function( msg, args ) {
 		col = 0x645188;
 	}*/
 
-	msg.edit( {content: out } )
+	msg.delete()
+	bot.createMessage( msg.channel.id, {content: out } )
 
-	console.log( "EVAL: In: " + inp + "Out: " + out );
+	console.log( "EVAL: In: " + inp + " Out: " + out );
 }, {
 	description: "Chat Evaluation: Prints output to guild chat",
 	aliases: [ "ce" ]
@@ -97,7 +98,7 @@ bot.registerCommand( "seval", function( msg, args ) {
 
 	msg.delete()
 
-	console.log( "EVAL: In: " + inp + "Out: " + out );
+	console.log( "EVAL: In: " + inp + " Out: " + out );
 }, {
 	description: "Silent Evaluation: Only prints to console",
 	aliases: [ "se" ]
