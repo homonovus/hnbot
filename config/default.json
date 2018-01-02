@@ -1,0 +1,7 @@
+{
+    "msgreact":{
+        "value": "true",
+        "possibilities": ["true","false"],
+        "desc": "Allow the bot to react to certain keyword messages."
+    }
+}

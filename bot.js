@@ -1,9 +1,9 @@
-const Eris = require( "eris" );
-var info = require( "./info.json" );
+const Eris = require( "eris" )
+var info = require( "./info.json" )
 
 var bot = new Eris.CommandClient( info[ "token" ], {}, {
 	owner: info[ "owner" ],
-	prefix: [ info[ "prefix" ], "@mention" ],
+	prefix: [ info[ "prefix" ], `<@${info[ "id" ]}> `, `<@!${info[ "id" ]}> ` ],
 	defaultHelpCommand: false,
 	ignoreSelf: true, // Set to false if you want to use a selfbot
 	/*defaultCommandOptions: {
